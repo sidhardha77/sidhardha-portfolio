@@ -4,131 +4,204 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kovvuru Sidhardha | Data Scientist | Data Analyst</title>
+
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111827;
+      --card: #f3f4f6;
+      --primary: #2563eb;
+      --border: #e5e7eb;
+    }
+
+    body.dark {
+      --bg: #0f172a;
+      --text: #e5e7eb;
+      --card: #111827;
+      --primary: #60a5fa;
+      --border: #1f2933;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.3s ease;
     }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
     header {
-      padding: 60px 20px;
+      padding: 80px 20px 40px;
       text-align: center;
-      background: linear-gradient(135deg, #2563eb, #1e40af);
+      border-bottom: 1px solid var(--border);
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.6rem;
+      margin-bottom: 10px;
     }
+
     header p {
       font-size: 1.1rem;
-      margin-top: 10px;
+      margin: 5px 0;
     }
+
+    .toggle {
+      margin-top: 20px;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
     section {
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
+
     h2 {
-      color: #60a5fa;
-      border-bottom: 2px solid #1e3a8a;
-      padding-bottom: 5px;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
     }
+
     .card {
-      background-color: #111827;
+      background: var(--card);
       padding: 20px;
-      margin: 20px 0;
-      border-radius: 8px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
     }
-    a {
-      color: #93c5fd;
-      text-decoration: none;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
-    a:hover {
-      text-decoration: underline;
-    }
+
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #020617;
+      padding: 30px 10px;
+      border-top: 1px solid var(--border);
       font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <h1>Kovvuru Sidhardha</h1>
-  <p>Data Scientist | Data Analyst (B.Tech AI Student, NITK Surathkal)</p>
+  <p><b>Data Scientist | Data Analyst</b></p>
+  <p>B.Tech AI Student, NITK Surathkal</p>
+
   <p>
-    <a href="mailto:sidhardhak77@gmail.com">Email</a> •
-    <a href="https://www.linkedin.com/in/sidhardhak" target="_blank">LinkedIn</a> •
+    <a href="mailto:sidhardhak77@gmail.com">Email</a> ·
+    <a href="https://www.linkedin.com/in/sidhardhak" target="_blank">LinkedIn</a> ·
     <a href="https://github.com/sidhardha77" target="_blank">GitHub</a>
   </p>
+
+  <button class="toggle" onclick="toggleTheme()">Toggle Dark / Light</button>
 </header>
 
 <section>
-  <h2>About Me</h2>
+  <h2>About</h2>
   <div class="card">
     <p>
       I am a B.Tech student specializing in Artificial Intelligence at NITK Surathkal,
-      with strong interests in data analysis, data science, and applied machine learning.
-      I enjoy transforming raw data into meaningful insights and building data-driven solutions.
+      with a strong interest in data analysis, data science, and applied machine learning.
+      I enjoy working with data to uncover insights and build data-driven solutions
+      with real-world impact.
     </p>
   </div>
+</section>
 
+<section>
   <h2>Skills</h2>
-  <div class="card">
-    <ul>
-      <li><b>Programming:</b> Python, C</li>
-      <li><b>Data Analysis:</b> Pandas, NumPy, SQL, Power BI (pursuing)</li>
-      <li><b>Machine Learning:</b> Scikit-learn, TensorFlow, XGBoost</li>
-      <li><b>Visualization:</b> Matplotlib, Seaborn, Power BI</li>
-      <li><b>Tools:</b> Git, GitHub, Flask, VS Code</li>
-    </ul>
+  <div class="grid">
+    <div class="card">
+      <b>Programming & Data</b>
+      <p>Python, SQL, Pandas, NumPy</p>
+    </div>
+    <div class="card">
+      <b>Machine Learning</b>
+      <p>Scikit-learn, TensorFlow, XGBoost</p>
+    </div>
+    <div class="card">
+      <b>Visualization</b>
+      <p>Power BI (Pursuing), Matplotlib, Seaborn</p>
+    </div>
+    <div class="card">
+      <b>Tools</b>
+      <p>Git, GitHub, Flask, VS Code</p>
+    </div>
   </div>
+</section>
 
+<section>
+  <h2>Experience</h2>
+  <div class="card">
+    <b>Research Intern – NITK Surathkal</b>
+    <p>
+      Built a secure multi-cloud storage system using rclone and GPG encryption,
+      developed a Flask dashboard, and integrated a Proof-of-Work blockchain
+      to ensure data integrity and tamper-resistant verification.
+    </p>
+  </div>
+</section>
+
+<section>
   <h2>Projects</h2>
 
   <div class="card">
-    <h3>Childhood Obesity Prediction</h3>
+    <b>Childhood Obesity Prediction</b>
     <p>
-      Built a predictive model using Random Forest and XGBoost to identify obesity risk.
-      Achieved 94% accuracy using feature optimization and GridSearchCV.
+      Developed a predictive analytics model using Random Forest and XGBoost,
+      achieving 94% accuracy through feature optimization and GridSearchCV.
     </p>
   </div>
 
   <div class="card">
-    <h3>Smart Refrigerator Inventory Management</h3>
+    <b>Smart Refrigerator Inventory Management</b>
     <p>
-      Developed an AI-driven inventory system using YOLO and Flask with automated email alerts,
-      reducing manual tracking time by 90%.
+      AI-driven inventory tracking system using YOLO and Flask with automated
+      email alerts, reducing manual tracking time by 90%.
     </p>
   </div>
 
   <div class="card">
-    <h3>Social Distance Monitoring System</h3>
+    <b>Social Distance Monitoring System</b>
     <p>
-      Created a real-time monitoring system using YOLO and OpenCV achieving 95% detection accuracy
-      with improved precision through distance calibration.
+      Real-time YOLO-based monitoring system achieving 95% detection accuracy
+      with improved precision using distance calibration.
     </p>
   </div>
 
-  <h2>Experience</h2>
   <div class="card">
-    <h3>Research Intern – NITK Surathkal</h3>
+    <b>Timetable Scheduler</b>
     <p>
-      Engineered a secure multi-cloud storage system using rclone and GPG encryption,
-      developed a Flask dashboard, and integrated a Proof-of-Work blockchain
-      for data integrity and verification.
+      Automated scheduling system inspired by OS algorithms,
+      reducing manual planning time by 75%.
     </p>
   </div>
 </section>
 
 <footer>
-  © 2026 Kovvuru Sidhardha • Built with GitHub Pages
+  © 2026 Kovvuru Sidhardha · GitHub Pages
 </footer>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("dark");
+  }
+</script>
 
 </body>
 </html>
